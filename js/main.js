@@ -133,6 +133,33 @@ const posts = [
     imageAlt: 'Walking for creativity'
   },
   {
+    title: 'Don\'t Forget Your Handwriting',
+    date: '2019-07-11',
+    displayDate: 'July 11, 2019',
+    excerpt: 'Rediscover the importance of handwriting in our digital age. Learn why putting pen to paper can enhance creativity, mindfulness, and personal expression.',
+    link: 'posts/dont-forget-your-handwriting.html',
+    image: 'https://i0.wp.com/simplify-yourself.com/wp-content/uploads/2019/07/IMG_2190.jpg',
+    imageAlt: 'Handwriting with pen on paper'
+  },
+  {
+    title: 'No Real Relationships Anymore?',
+    date: '2016-12-09',
+    displayDate: 'December 9, 2016',
+    excerpt: 'Exploring why modern relationships seem increasingly non-committal and superficial. Are we avoiding deep connections out of fear or too many choices?',
+    link: 'posts/no-real-relationships-anymore.html',
+    image: 'https://i0.wp.com/simplify-yourself.com/wp-content/uploads/2016/12/2016-12-08-11.54.25-1.jpg',
+    imageAlt: 'Modern relationships and connections'
+  },
+  {
+    title: 'What \'The Godfather\' Means About Family',
+    date: '2015-10-15',
+    displayDate: 'October 15, 2015',
+    excerpt: 'Exploring the deeper meaning of family connections and the unconditional love that defines our most precious relationships. Inspired by timeless wisdom about family bonds.',
+    link: 'posts/what-the-godfather-means-about-family.html',
+    image: 'https://i0.wp.com/simplify-yourself.com/wp-content/uploads/2015/10/Familie.jpg?fit=720%2C478&ssl=1',
+    imageAlt: 'Family gathering representing connection and love'
+  },
+  {
     title: 'Brrrrr-ings It Benefits? The Cold, Hard Truth About Cold Showers',
     date: '2023-01-26',
     displayDate: 'January 26, 2023',
