@@ -1,0 +1,12 @@
+# Environment variables
+.env
+
+# Sensitive data
+posts_1.json
+wordpress-export.xml
+
+# AI assistant settings
+.claude/
+
+# Node.js dependencies
+node_modules/
