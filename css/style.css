@@ -5,6 +5,13 @@
   --font-main: 'Inter', Arial, sans-serif;
 }
 
+/* Light mode variables */
+:root.light-mode {
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --color-accent: #FF5C2A;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -62,6 +69,29 @@ nav {
   color: var(--color-accent);
 }
 
+/* Dark mode toggle button */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: scale(1.1);
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -70,6 +100,11 @@ nav {
   background: linear-gradient(120deg, #FF5C2A 0%, #000 100%);
   position: relative;
   overflow: hidden;
+}
+
+/* Light mode hero background */
+:root.light-mode .hero {
+  background: linear-gradient(120deg, #FF5C2A 0%, #f0f0f0 100%);
 }
 
 #webgl-bg {
@@ -133,6 +168,13 @@ nav {
   border: 1px solid rgba(255,92,42,0.12);
 }
 
+/* Light mode blog post styles */
+:root.light-mode .post {
+  background: #ffffff;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,92,42,0.3);
+}
+
 .post:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 8px 32px 0 rgba(255,92,42,0.18);
@@ -151,6 +193,11 @@ nav {
   color: #fff8;
   margin-bottom: 0.8rem;
   letter-spacing: 0.05em;
+}
+
+/* Light mode post date color */
+:root.light-mode .post-date {
+  color: #6668;
 }
 
 .post-categories {
@@ -192,6 +239,12 @@ nav {
   border-color: #fff;
 }
 
+/* Light mode read-more hover */
+:root.light-mode .read-more:hover {
+  color: #333;
+  border-color: #333;
+}
+
 /* Single Blog Post Styles */
 .single-post {
   max-width: 700px;
@@ -204,6 +257,13 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+/* Light mode single post background */
+:root.light-mode .single-post {
+  background: #ffffff;
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.12);
+  border: 1.5px solid rgba(255,92,42,0.35);
 }
 
 .single-post .post-title {
@@ -219,6 +279,11 @@ nav {
   color: #fff7;
   margin-bottom: 2.2rem;
   letter-spacing: 0.07em;
+}
+
+/* Light mode single post date */
+:root.light-mode .single-post .post-date {
+  color: #6667;
 }
 
 .single-post .post-content {
@@ -328,6 +393,11 @@ nav {
   border-radius: 0.7rem;
 }
 
+/* Light mode blockquote text */
+:root.light-mode .single-post .post-content blockquote {
+  color: #333;
+}
+
 /* Features Section */
 .features {
   width: 100%;
@@ -337,6 +407,11 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Light mode features background */
+:root.light-mode .features {
+  background: linear-gradient(120deg, #f8f8f8 0%, #ececec 100%);
 }
 
 .features-title {
@@ -372,6 +447,13 @@ nav {
   transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
 }
 
+/* Light mode feature card background */
+:root.light-mode .feature-card {
+  background: #ffffff;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+  border: 1.5px solid rgba(255,92,42,0.35);
+}
+
 .feature-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 32px 0 rgba(255,92,42,0.18);
@@ -397,6 +479,11 @@ nav {
   font-size: 1.08rem;
   text-align: center;
   line-height: 1.6;
+}
+
+/* Light mode feature description text */
+:root.light-mode .feature-desc {
+  color: #333;
 }
 
 @media (max-width: 900px) {
@@ -557,6 +644,12 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Light mode about mission background */
+:root.light-mode .about-mission {
+  background: #ffffff;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
+}
+
 .about-mission:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 32px 0 rgba(255,92,42,0.15);
@@ -577,6 +670,11 @@ nav {
   line-height: 1.7;
 }
 
+/* Light mode about mission text */
+:root.light-mode .about-mission p {
+  color: #333;
+}
+
 .about-contact {
   max-width: 700px;
   margin: 0 auto 4rem auto;
@@ -585,6 +683,12 @@ nav {
   box-shadow: 0 2px 16px 0 rgba(255,92,42,0.08);
   padding: 2.5rem 2rem 2.2rem 2rem;
   text-align: center;
+}
+
+/* Light mode about contact background */
+:root.light-mode .about-contact {
+  background: #ffffff;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
 }
 .about-contact h2 {
   color: var(--color-accent);
@@ -1331,6 +1435,11 @@ nav {
   flex-direction: column;
   align-items: center;
 }
+
+/* Light mode featured post background */
+:root.light-mode .featured-post {
+  background: linear-gradient(120deg, #f5f5f5 0%, #e8e8e8 100%);
+}
 .featured-title {
   color: var(--color-accent);
   font-size: 2rem;
@@ -1349,6 +1458,13 @@ nav {
   max-width: 800px;
   width: 100%;
   overflow: hidden;
+}
+
+/* Light mode featured card background */
+:root.light-mode .featured-card {
+  background: #ffffff;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.15);
+  border: 1.5px solid rgba(255,92,42,0.35);
 }
 .featured-thumb {
   width: 220px;
@@ -1375,11 +1491,22 @@ nav {
   color: #fff8;
   margin-bottom: 1.1rem;
 }
+
+/* Light mode featured post date and excerpt */
+:root.light-mode .featured-post-date {
+  color: #6668;
+}
+
 .featured-post-excerpt {
   color: #fff;
   font-size: 1.08rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+}
+
+/* Light mode featured post excerpt */
+:root.light-mode .featured-post-excerpt {
+  color: #333;
 }
 .featured-read-more {
   display: inline-block;
@@ -1425,9 +1552,20 @@ nav {
   position: relative;
 }
 
+/* Light mode blog post background */
+:root.light-mode .blog-post {
+  background: #ffffff;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
+}
+
 .post-header {
   padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   border-bottom: 1px solid rgba(255,92,42,0.2);
+}
+
+/* Light mode post header border */
+:root.light-mode .post-header {
+  border-bottom: 1px solid rgba(255,92,42,0.3);
 }
 
 .post-meta {
@@ -1442,6 +1580,11 @@ nav {
   color: rgba(255,255,255,0.7);
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+/* Light mode post date color */
+:root.light-mode .post-date {
+  color: rgba(0,0,0,0.65);
 }
 
 .post-categories {
@@ -1510,6 +1653,11 @@ nav {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
+}
+
+/* Light mode post body text */
+:root.light-mode .post-body p {
+  color: rgba(0,0,0,0.85);
 }
 
 .post-body a {

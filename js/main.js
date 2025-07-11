@@ -13,14 +13,27 @@ function updateHeroBg() {
   const scrollY = window.scrollY;
   const maxScroll = 500;
   const progress = Math.min(scrollY / maxScroll, 1);
-  // Interpolate between two colors for the gradient
-  // Start: #FF5C2A (orange), End: #000000 (black)
-  const orange = [255, 92, 42];
-  const black = [0, 0, 0];
-  const r = Math.round(orange[0] + (black[0] - orange[0]) * progress);
-  const g = Math.round(orange[1] + (black[1] - orange[1]) * progress);
-  const b = Math.round(orange[2] + (black[2] - orange[2]) * progress);
-  hero.style.background = `linear-gradient(120deg, rgb(${r},${g},${b}) 0%, #000 100%)`;
+  
+  // Check if we're in light mode
+  const isLightMode = document.documentElement.classList.contains('light-mode');
+  
+  if (isLightMode) {
+    // Light mode: interpolate between orange and light gray
+    const orange = [255, 92, 42];
+    const lightGray = [240, 240, 240];
+    const r = Math.round(orange[0] + (lightGray[0] - orange[0]) * progress);
+    const g = Math.round(orange[1] + (lightGray[1] - orange[1]) * progress);
+    const b = Math.round(orange[2] + (lightGray[2] - orange[2]) * progress);
+    hero.style.background = `linear-gradient(120deg, rgb(${r},${g},${b}) 0%, #f0f0f0 100%)`;
+  } else {
+    // Dark mode: interpolate between orange and black
+    const orange = [255, 92, 42];
+    const black = [0, 0, 0];
+    const r = Math.round(orange[0] + (black[0] - orange[0]) * progress);
+    const g = Math.round(orange[1] + (black[1] - orange[1]) * progress);
+    const b = Math.round(orange[2] + (black[2] - orange[2]) * progress);
+    hero.style.background = `linear-gradient(120deg, rgb(${r},${g},${b}) 0%, #000 100%)`;
+  }
 }
 
 window.addEventListener('scroll', () => {
@@ -252,4 +265,40 @@ window.addEventListener('scroll', toggleBackToTopButton);
 // Add click event listener for back to top button
 if (backToTopButton) {
   backToTopButton.addEventListener('click', scrollToTop);
+}
+
+// Dark mode toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const rootElement = document.documentElement;
+
+// Check for saved theme preference or default to dark mode
+const savedTheme = localStorage.getItem('theme') || 'dark';
+if (savedTheme === 'light') {
+  rootElement.classList.add('light-mode');
+  if (themeToggle) themeToggle.textContent = '☀️';
+  // Update hero background for light mode
+  updateHeroBg();
+}
+
+// Toggle theme function
+function toggleTheme() {
+  const isLightMode = rootElement.classList.contains('light-mode');
+  
+  if (isLightMode) {
+    rootElement.classList.remove('light-mode');
+    localStorage.setItem('theme', 'dark');
+    if (themeToggle) themeToggle.textContent = '🌙';
+  } else {
+    rootElement.classList.add('light-mode');
+    localStorage.setItem('theme', 'light');
+    if (themeToggle) themeToggle.textContent = '☀️';
+  }
+  
+  // Update hero background for current scroll position
+  updateHeroBg();
+}
+
+// Add click event listener for theme toggle
+if (themeToggle) {
+  themeToggle.addEventListener('click', toggleTheme);
 } 
