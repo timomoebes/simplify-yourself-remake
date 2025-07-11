@@ -3,7 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simplify Yourself - Blog</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>Blog - Simplify Yourself | Minimalism & Personal Development Articles</title>
+  <meta name="title" content="Blog - Simplify Yourself | Minimalism & Personal Development Articles">
+  <meta name="description" content="Browse 13 authentic blog posts about minimalism, mindfulness, health, and personal development. Find practical tips for living intentionally and simplifying your life.">
+  <meta name="keywords" content="minimalism blog, personal development articles, mindfulness tips, health advice, lifestyle blog, simplify life">
+  <meta name="author" content="Timo Möbes">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simplify-yourself-remake.netlify.app/blog.html">
+  <meta property="og:title" content="Blog - Simplify Yourself | Minimalism & Personal Development Articles">
+  <meta property="og:description" content="Browse 13 authentic blog posts about minimalism, mindfulness, health, and personal development. Find practical tips for living intentionally and simplifying your life.">
+  <meta property="og:image" content="https://simplify-yourself-remake.netlify.app/assets/images/featured/walking-creativity.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://simplify-yourself-remake.netlify.app/blog.html">
+  <meta property="twitter:title" content="Blog - Simplify Yourself | Minimalism & Personal Development Articles">
+  <meta property="twitter:description" content="Browse 13 authentic blog posts about minimalism, mindfulness, health, and personal development. Find practical tips for living intentionally and simplifying your life.">
+  <meta property="twitter:image" content="https://simplify-yourself-remake.netlify.app/assets/images/featured/walking-creativity.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://simplify-yourself-remake.netlify.app/blog.html">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Simplify Yourself Blog",
+    "description": "A collection of articles about minimalism, mindfulness, health, and personal development",
+    "url": "https://simplify-yourself-remake.netlify.app/blog.html",
+    "author": {
+      "@type": "Person",
+      "name": "Timo Möbes"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Timo Möbes"
+    },
+    "inLanguage": "en-US",
+    "keywords": ["minimalism", "mindfulness", "personal development", "health", "lifestyle"]
+  }
+  </script>
+  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -56,7 +102,9 @@
             <label for="year-filter">Filter by year:</label>
             <select id="year-filter" class="year-select">
               <option value="">All Years</option>
+              <option value="2024">2024</option>
               <option value="2023">2023</option>
+              <option value="2020">2020</option>
               <option value="2019">2019</option>
               <option value="2016">2016</option>
               <option value="2015">2015</option>
@@ -66,10 +114,33 @@
       </div>
       
       <div class="blog-results-info">
-        <span id="results-info">Showing all 13 posts</span>
+        <span id="results-info">Showing all 15 posts</span>
         <button id="clear-filters" class="clear-filters-btn" style="display: none;">Clear all filters</button>
       </div>
       <div class="posts" id="posts-container">
+        <article class="post" data-year="2024" data-categories="3D Printing,Technology,DIY">
+          <h2 class="post-title">The Path to Perfect 3D Printer Bed Calibration: A Journey Through Patience, Precision and Constant Adjustment</h2>
+          <p class="post-date">September 3, 2024</p>
+          <div class="post-categories">
+            <span class="category">3D Printing</span>
+            <span class="category">Technology</span>
+            <span class="category">DIY</span>
+          </div>
+          <p class="post-excerpt">Learn how to achieve perfect 3D printer bed calibration through patience, precision and constant adjustment. Discover the art of using BLTouch sensor, OctoPrint, and Bed Level Visualizer for optimal printing results.</p>
+          <a href="posts/perfect-3d-printer-bed-calibration.html" class="read-more">Read more</a>
+        </article>
+        <article class="post" data-year="2020" data-categories="3D Printing,Technology,Ideas,Videos">
+          <h2 class="post-title">Christmas Gifts from the 3D Printer</h2>
+          <p class="post-date">December 13, 2020</p>
+          <div class="post-categories">
+            <span class="category">3D Printing</span>
+            <span class="category">Technology</span>
+            <span class="category">Ideas</span>
+            <span class="category">Videos</span>
+          </div>
+          <p class="post-excerpt">This year's Christmas gifts come from the 3D printer. I focus on practical applications that hopefully won't end up unnoticed in a corner. Watch the time-lapse of creating custom gifts.</p>
+          <a href="posts/christmas-gifts-3d-printer.html" class="read-more">Read more</a>
+        </article>
         <article class="post" data-year="2023" data-categories="Mindfulness,Health,Ideas">
           <h2 class="post-title">The Magic of Walking: How a Simple Walk Can Spark More Creativity</h2>
           <p class="post-date">September 29, 2023</p>

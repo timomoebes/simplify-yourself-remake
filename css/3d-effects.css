@@ -1,0 +1,394 @@
+/* Advanced 3D Effects and Animations */
+
+/* Global 3D Setup */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Enhanced Hero 3D Effects */
+.hero {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(255, 92, 42, 0.15), transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(255, 140, 66, 0.1), transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 184, 77, 0.05), transparent 70%);
+  z-index: 0;
+  animation: heroDepthShift 20s ease-in-out infinite;
+}
+
+@keyframes heroDepthShift {
+  0%, 100% { 
+    transform: translateZ(0px) rotateZ(0deg) scale(1); 
+  }
+  33% { 
+    transform: translateZ(10px) rotateZ(1deg) scale(1.02); 
+  }
+  66% { 
+    transform: translateZ(-5px) rotateZ(-0.5deg) scale(0.98); 
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  transform: translateZ(30px);
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { 
+    transform: translateZ(30px) translateY(0px) rotateX(0deg); 
+  }
+  50% { 
+    transform: translateZ(35px) translateY(-10px) rotateX(2deg); 
+  }
+}
+
+/* Advanced Card 3D Effects */
+.post, .feature-card, .fact-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backface-visibility: hidden;
+}
+
+.post::after, .feature-card::after, .fact-card::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: linear-gradient(135deg, 
+    rgba(255, 92, 42, 0.1), 
+    rgba(255, 140, 66, 0.05), 
+    rgba(255, 184, 77, 0.02));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transform: translateZ(-10px) scale(1.05);
+  transition: all 0.3s ease;
+  filter: blur(5px);
+}
+
+.post:hover::after, .feature-card:hover::after, .fact-card:hover::after {
+  opacity: 1;
+}
+
+/* Scroll-triggered 3D Reveals */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(60px) rotateX(45deg) translateZ(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg) translateZ(0px);
+}
+
+.scroll-reveal:nth-child(odd).revealed {
+  animation: revealFromLeft 0.8s ease-out;
+}
+
+.scroll-reveal:nth-child(even).revealed {
+  animation: revealFromRight 0.8s ease-out;
+}
+
+@keyframes revealFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) rotateY(45deg) translateZ(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg) translateZ(0px);
+  }
+}
+
+@keyframes revealFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) rotateY(-45deg) translateZ(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg) translateZ(0px);
+  }
+}
+
+/* Advanced Button 3D Effects */
+.cta, .read-more, .theme-toggle, .submit-btn {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.cta::before, .read-more::before, .theme-toggle::before, .submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.cta:hover::before, .read-more:hover::before, 
+.theme-toggle:hover::before, .submit-btn:hover::before {
+  left: 100%;
+}
+
+/* 3D Navigation Enhancement */
+.nav-links a {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FF5C2A, #FF8C42);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(10px);
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  transform: translateY(-3px) translateZ(15px);
+  text-shadow: 0 5px 15px rgba(255, 92, 42, 0.3);
+}
+
+/* Enhanced Timeline 3D Effects */
+.timeline-item {
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(15px) translateZ(20px) rotateY(5deg);
+}
+
+.timeline-item::before {
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+  box-shadow: 
+    0 0 0 3px var(--color-accent), 
+    0 0 15px rgba(255, 92, 42, 0.5),
+    0 0 25px rgba(255, 92, 42, 0.3);
+  transform: scale(1.5) translateZ(10px);
+}
+
+/* 3D Gallery Grid Enhancement */
+.gallery-grid {
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.gallery-item {
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery-item:hover {
+  transform: translateY(-20px) translateZ(30px) rotateX(5deg) scale(1.05);
+  z-index: 10;
+}
+
+/* Enhanced Filter Buttons */
+.filter-btn {
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 92, 42, 0.3), transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.filter-btn:hover::before {
+  width: 200px;
+  height: 200px;
+}
+
+.filter-btn.active {
+  animation: activeButtonPulse 2s ease-in-out infinite;
+}
+
+@keyframes activeButtonPulse {
+  0%, 100% {
+    box-shadow: 0 4px 16px 0 rgba(255,92,42,0.4);
+  }
+  50% {
+    box-shadow: 0 6px 25px 0 rgba(255,92,42,0.6), 0 0 30px rgba(255,92,42,0.3);
+  }
+}
+
+/* Parallax 3D Sections */
+.parallax-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+/* Loading Animation with 3D */
+.loading-3d {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.9), rgba(0,0,0,0.95));
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.loading-3d.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.loading-spinner::before,
+.loading-spinner::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #FF5C2A;
+  border-radius: 50%;
+  animation: spin3D 1s linear infinite;
+}
+
+.loading-spinner::after {
+  border-top: 3px solid #FF8C42;
+  animation-duration: 1.5s;
+  animation-direction: reverse;
+  transform: translateZ(10px);
+}
+
+@keyframes spin3D {
+  0% {
+    transform: rotateZ(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg) rotateY(360deg);
+  }
+}
+
+/* Responsive 3D Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    perspective: 800px;
+  }
+  
+  .hero-content {
+    transform: translateZ(15px);
+  }
+  
+  .post, .feature-card, .fact-card {
+    transform-style: flat;
+  }
+  
+  .post:hover, .feature-card:hover, .fact-card:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px) scale(1.03);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    perspective: 600px;
+  }
+  
+  .hero-content {
+    transform: translateZ(10px);
+  }
+  
+  .parallax-3d {
+    transform: none !important;
+  }
+}
+
+/* Performance Optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Dark/Light Mode 3D Adjustments */
+:root.light-mode .hero::before {
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(255, 92, 42, 0.08), transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(255, 140, 66, 0.05), transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 184, 77, 0.03), transparent 70%);
+}
+
+:root.light-mode .post::after, 
+:root.light-mode .feature-card::after, 
+:root.light-mode .fact-card::after {
+  background: linear-gradient(135deg, 
+    rgba(255, 92, 42, 0.05), 
+    rgba(255, 140, 66, 0.03), 
+    rgba(255, 184, 77, 0.01));
+}

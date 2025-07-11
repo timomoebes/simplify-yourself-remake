@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://simplify-yourself-remake.netlify.app/sitemap.xml
+
+# Disallow specific paths
+Disallow: /assets/images/screenshots/
+Disallow: /.git/
+Disallow: /scripts/
+Disallow: /js/
+Disallow: /css/
+
+# Crawl delay (optional - sets delay between requests)
+Crawl-delay: 1

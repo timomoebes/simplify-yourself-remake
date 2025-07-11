@@ -2020,6 +2020,27 @@ nav {
   color: var(--color-text);
 }
 
+/* Video Container Styles */
+.video-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.video-caption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
 @media (max-width: 900px) {
   .post-content {
     padding: 6rem 1rem 2rem 1rem;

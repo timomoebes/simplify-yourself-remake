@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/about.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/blog.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/contact.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/the-magic-of-walking.html</loc>
+    <lastmod>2023-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/cold-shower-benefits.html</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/dont-forget-your-handwriting.html</loc>
+    <lastmod>2019-07-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/sup-berlin-gatow-grunewald.html</loc>
+    <lastmod>2019-07-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/no-real-relationships-anymore.html</loc>
+    <lastmod>2016-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/living-without-coffee.html</loc>
+    <lastmod>2016-10-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/18-cool-photo-wall-ideas.html</loc>
+    <lastmod>2016-10-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/meditation-for-beginners.html</loc>
+    <lastmod>2016-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/living-without-smartphone.html</loc>
+    <lastmod>2015-11-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/what-the-godfather-means-about-family.html</loc>
+    <lastmod>2015-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/financial-freedom.html</loc>
+    <lastmod>2015-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/slow-training-progress-supplements.html</loc>
+    <lastmod>2015-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://simplify-yourself-remake.netlify.app/posts/blog-start.html</loc>
+    <lastmod>2015-08-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
