@@ -301,4 +301,190 @@ function toggleTheme() {
 // Add click event listener for theme toggle
 if (themeToggle) {
   themeToggle.addEventListener('click', toggleTheme);
-} 
+}
+
+// Contact Form Functionality
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formSuccess = document.getElementById('form-success');
+
+// Form validation functions
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function validateForm(formData) {
+  let isValid = true;
+  const errors = {};
+
+  // Clear previous errors
+  document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
+
+  // Validate name
+  if (!formData.name.trim()) {
+    errors.name = 'Name is required';
+    isValid = false;
+  } else if (formData.name.trim().length < 2) {
+    errors.name = 'Name must be at least 2 characters';
+    isValid = false;
+  }
+
+  // Validate email
+  if (!formData.email.trim()) {
+    errors.email = 'Email is required';
+    isValid = false;
+  } else if (!validateEmail(formData.email)) {
+    errors.email = 'Please enter a valid email address';
+    isValid = false;
+  }
+
+  // Validate subject
+  if (!formData.subject.trim()) {
+    errors.subject = 'Subject is required';
+    isValid = false;
+  } else if (formData.subject.trim().length < 3) {
+    errors.subject = 'Subject must be at least 3 characters';
+    isValid = false;
+  }
+
+  // Validate message
+  if (!formData.message.trim()) {
+    errors.message = 'Message is required';
+    isValid = false;
+  } else if (formData.message.trim().length < 10) {
+    errors.message = 'Message must be at least 10 characters';
+    isValid = false;
+  }
+
+  // Display errors
+  Object.keys(errors).forEach(field => {
+    const errorElement = document.getElementById(`${field}-error`);
+    if (errorElement) {
+      errorElement.textContent = errors[field];
+    }
+  });
+
+  return isValid;
+}
+
+function setLoadingState(loading) {
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnLoading = submitBtn.querySelector('.btn-loading');
+  
+  if (loading) {
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'flex';
+    submitBtn.disabled = true;
+  } else {
+    btnText.style.display = 'block';
+    btnLoading.style.display = 'none';
+    submitBtn.disabled = false;
+  }
+}
+
+function showSuccessMessage() {
+  contactForm.style.display = 'none';
+  formSuccess.style.display = 'block';
+  
+  // Scroll to success message
+  formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  
+  // Reset form after 5 seconds
+  setTimeout(() => {
+    contactForm.style.display = 'block';
+    formSuccess.style.display = 'none';
+    contactForm.reset();
+  }, 5000);
+}
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  
+  // Get form data
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value
+  };
+
+  // Validate form
+  if (!validateForm(formData)) {
+    return;
+  }
+
+  // Set loading state
+  setLoadingState(true);
+
+  // Simulate form submission (replace with actual backend integration)
+  setTimeout(() => {
+    // For now, create a mailto link as fallback
+    const mailtoLink = `mailto:hello@simplify-yourself.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    setLoadingState(false);
+    showSuccessMessage();
+  }, 1500);
+}
+
+// Add form submit event listener
+if (contactForm) {
+  contactForm.addEventListener('submit', handleFormSubmit);
+}
+
+// Add real-time validation
+const formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
+formInputs.forEach(input => {
+  input.addEventListener('blur', () => {
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value
+    };
+    
+    // Only validate the specific field that lost focus
+    const field = input.id;
+    const errorElement = document.getElementById(`${field}-error`);
+    
+    if (field === 'name') {
+      if (!formData.name.trim()) {
+        errorElement.textContent = 'Name is required';
+      } else if (formData.name.trim().length < 2) {
+        errorElement.textContent = 'Name must be at least 2 characters';
+      } else {
+        errorElement.textContent = '';
+      }
+    } else if (field === 'email') {
+      if (!formData.email.trim()) {
+        errorElement.textContent = 'Email is required';
+      } else if (!validateEmail(formData.email)) {
+        errorElement.textContent = 'Please enter a valid email address';
+      } else {
+        errorElement.textContent = '';
+      }
+    } else if (field === 'subject') {
+      if (!formData.subject.trim()) {
+        errorElement.textContent = 'Subject is required';
+      } else if (formData.subject.trim().length < 3) {
+        errorElement.textContent = 'Subject must be at least 3 characters';
+      } else {
+        errorElement.textContent = '';
+      }
+    } else if (field === 'message') {
+      if (!formData.message.trim()) {
+        errorElement.textContent = 'Message is required';
+      } else if (formData.message.trim().length < 10) {
+        errorElement.textContent = 'Message must be at least 10 characters';
+      } else {
+        errorElement.textContent = '';
+      }
+    }
+  });
+}); 

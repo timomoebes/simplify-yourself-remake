@@ -25,13 +25,81 @@
   </header>
   <main>
     <section class="contact">
-      <h1>Contact</h1>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+      <div class="contact-container">
+        <div class="contact-header">
+          <h1>Get in Touch</h1>
+          <p>Have a question or want to share your minimalism journey? I'd love to hear from you!</p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2>Let's Connect</h2>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <a href="mailto:hello@simplify-yourself.com">hello@simplify-yourself.com</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">📘</div>
+                <div class="contact-details">
+                  <h3>Facebook</h3>
+                  <a href="https://www.facebook.com/timo.moebes" target="_blank">@timo.moebes</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">💼</div>
+                <div class="contact-details">
+                  <h3>LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/timomoebes/" target="_blank">@timomoebes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container">
+            <h2>Send a Message</h2>
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <span class="error-message" id="name-error"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                <span class="error-message" id="email-error"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                <span class="error-message" id="subject-error"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your minimalism journey, ask a question, or just say hello!" rows="6" required></textarea>
+                <span class="error-message" id="message-error"></span>
+              </div>
+              
+              <button type="submit" class="submit-btn" id="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" style="display: none;">Sending...</span>
+              </button>
+            </form>
+            
+            <div class="form-success" id="form-success" style="display: none;">
+              <div class="success-icon">✅</div>
+              <h3>Message Sent Successfully!</h3>
+              <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   

@@ -46,8 +46,8 @@
 ## Current Tasks 🔄
 
 ### Next Priority Tasks
-- 🔄 **Dark mode toggle** - Add dark/light theme switching functionality
-- 🔄 **Contact form functionality** - Make contact form functional with backend
+- ✅ **Dark mode toggle** - Add dark/light theme switching functionality
+- ✅ **Contact form functionality** - Make contact form functional with backend
 - 🔄 **Blog pagination** - Add pagination to blog listing page for better performance
 - 🔄 **Blog search functionality** - Add search and filter capabilities
 
