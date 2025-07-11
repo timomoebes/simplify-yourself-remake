@@ -48,6 +48,7 @@
 ### Next Priority Tasks
 - ✅ **Dark mode toggle** - Add dark/light theme switching functionality
 - ✅ **Contact form functionality** - Make contact form functional with backend
+- ✅ **Light mode styling fixes** - Fixed all contrast and visibility issues across the site
 - 🔄 **Blog pagination** - Add pagination to blog listing page for better performance
 - 🔄 **Blog search functionality** - Add search and filter capabilities
 
@@ -100,4 +101,4 @@
 - Back-to-top navigation on all pages
 - Clean, minimalist aesthetic reflecting the blog's philosophy
 
-*Last Updated: July 10, 2025* 
+*Last Updated: July 11, 2025* 

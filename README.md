@@ -8,10 +8,12 @@ Timo Möbes is a German blogger, entrepreneur, and advocate for simplified livin
 
 ## Key Features
 - **13 Authentic Blog Posts** - Complete German-to-English translations of real content
+- **Dark/Light Mode Toggle** - Full theme switching with localStorage persistence
 - **Interactive Americas Adventure Photo Gallery** - 307 photos from 14-month travel journey
 - **Interactive Timeline** - Visual journey through Timo's 10-year blogging history
 - **Dynamic Featured Posts** - Automatically highlights most recent content
 - **Animated Hero Section** - Smooth scroll-based background changes with floating orbs
+- **Functional Contact Form** - Complete contact form with validation and email integration
 - **Responsive Design** - Optimized for desktop and mobile experiences
 - **Real Content & Images** - All authentic images and content from original German blog
 - **Back-to-Top Navigation** - Smooth scroll functionality across all pages
@@ -111,8 +113,6 @@ This project represents a complete transformation from concept to fully function
 5. **Experience Animations**: Scroll through pages to see interactive effects
 
 ## Future Enhancements
-- **Dark Mode Toggle**: Light/dark theme switching functionality
-- **Contact Form**: Functional contact form with backend integration
 - **Blog Pagination**: Pagination for blog listing page performance
 - **Search Functionality**: Search and filter capabilities for blog posts
 - **Advanced Animations**: WebGL/Three.js integration for 3D elements
@@ -125,5 +125,5 @@ All blog content is authentically translated from Timo Möbes' original German b
 
 ---
 
-**Last Updated: July 10, 2025**
+**Last Updated: July 11, 2025**
 *This project continues to evolve with additional content and features.* 
