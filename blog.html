@@ -26,11 +26,51 @@
   <main>
     <section class="blog-list">
       <h1>Blog</h1>
-      <div class="blog-pagination-info">
-        <span id="posts-info">Showing <span id="current-range">1-5</span> of <span id="total-posts">13</span> posts</span>
+      
+      <!-- Search and Filter Section -->
+      <div class="blog-controls">
+        <div class="search-container">
+          <input type="text" id="blog-search" placeholder="Search posts..." class="search-input">
+          <button class="search-clear" id="search-clear" style="display: none;">✕</button>
+        </div>
+        
+        <div class="filter-container">
+          <div class="filter-group">
+            <label for="category-filter">Filter by category:</label>
+            <select id="category-filter" class="category-select">
+              <option value="">All Categories</option>
+              <option value="Mindfulness">Mindfulness</option>
+              <option value="Health">Health</option>
+              <option value="Personal Development">Personal Development</option>
+              <option value="Minimalism">Minimalism</option>
+              <option value="Outdoor">Outdoor</option>
+              <option value="Technology">Technology</option>
+              <option value="Fitness">Fitness</option>
+              <option value="Financial Freedom">Financial Freedom</option>
+              <option value="Relationships">Relationships</option>
+              <option value="Home Ideas">Home Ideas</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="year-filter">Filter by year:</label>
+            <select id="year-filter" class="year-select">
+              <option value="">All Years</option>
+              <option value="2023">2023</option>
+              <option value="2019">2019</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="blog-results-info">
+        <span id="results-info">Showing all 13 posts</span>
+        <button id="clear-filters" class="clear-filters-btn" style="display: none;">Clear all filters</button>
       </div>
       <div class="posts" id="posts-container">
-        <article class="post">
+        <article class="post" data-year="2023" data-categories="Mindfulness,Health,Ideas">
           <h2 class="post-title">The Magic of Walking: How a Simple Walk Can Spark More Creativity</h2>
           <p class="post-date">September 29, 2023</p>
           <div class="post-categories">
@@ -183,12 +223,6 @@
   </button>
   
   <script src="js/main.js"></script>
-</body>
-</html>">
-      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-    </svg>
-  </button>
-  
-  <script src="js/main.js"></script>
+  <script src="js/blog-search.js"></script>
 </body>
 </html> 
